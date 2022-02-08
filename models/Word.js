@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
-      // tableName: "words",
+      tableName: "words",
       timestamps: false,
       freezeTableName: true
     }
