@@ -38,18 +38,10 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: 0,
         allowNull: true,
       },
-      createdAt: {
-        type: DataTypes.DATE,
-        allowNull: true,
-      },
-      updateAt: {
-        type: DataTypes.DATE,
-        allowNull: true,
-      },
     },
     {
-      tableName: "words",
-    }, {
+      // tableName: "words",
+      timestamps: false,
       freezeTableName: true
     }
   );

@@ -24,14 +24,6 @@ module.exports = {
         defaultValue: 0,
         allowNull: true,
       },
-      createdAt: {
-        type: Sequelize.DATE,
-        allowNull: true,
-      },
-      updateAt: {
-        type: Sequelize.DATE,
-        allowNull: true,
-      },
     });
   },
 

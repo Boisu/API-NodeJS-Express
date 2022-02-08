@@ -6,8 +6,9 @@ const { Word } = require("../models");
 const v = new Validator();
 
 router.get("/", async (req, res) => {
-  const word = await Word.findAll();
+  const word = Word.findAll("one");
   return res.json(word);
+  // res.send('Hello World');
 });
 
 router.post("/new", async (req, res) => {
@@ -21,7 +22,7 @@ router.post("/new", async (req, res) => {
     return res.status(400).json(validate);
   }
 
-  // const word = await Word.create(req.body);
+  const word = await Word.create(req.body);
   res.json(req.body);
 });
 
